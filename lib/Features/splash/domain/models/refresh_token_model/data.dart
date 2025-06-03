@@ -3,11 +3,8 @@ class Data {
 
   Data({this.token});
 
-  factory Data.fromJson(Map<String, dynamic> json) => Data(
-        token: json['token'] as String?,
-      );
+  factory Data.fromJson(Map<String, dynamic> json) =>
+      Data(token: json['token'] as String?);
 
-  Map<String, dynamic> toJson() => {
-        'token': token,
-      };
+  Map<String, dynamic> toJson() => {'token': token};
 }

@@ -16,9 +16,10 @@ class LocaleCubit extends Cubit<LocaleState> {
   final ChangeLocaleUseCase changeLocaleUseCase;
   final GetSavedLangUseCase getSavedLangUseCase;
 
-  LocaleCubit(
-      {required this.changeLocaleUseCase, required this.getSavedLangUseCase})
-      : super(const SelectedLocale(Locale('ar')));
+  LocaleCubit({
+    required this.changeLocaleUseCase,
+    required this.getSavedLangUseCase,
+  }) : super(const SelectedLocale(Locale('ar')));
 
   String langCode = arabic;
 
@@ -30,8 +31,8 @@ class LocaleCubit extends Cubit<LocaleState> {
   }
 
   Future<void> getSavedLang() async {
-    final String cachedLanguageCode =
-        await LanguageCacheHelper().getCachedLanguageCode();
+    final String cachedLanguageCode = await LanguageCacheHelper()
+        .getCachedLanguageCode();
     emit(SelectedLocale(Locale(cachedLanguageCode)));
   }
 

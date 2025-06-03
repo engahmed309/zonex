@@ -12,7 +12,7 @@ class Gaps {
   static const Widget hGap20 = SizedBox(width: 20);
   static const Widget hGap30 = SizedBox(width: 30);
 
-//Vertical
+  //Vertical
   static const Widget vGap4 = SizedBox(height: 4.0);
   static const Widget vGap5 = SizedBox(height: 5);
   static const Widget vGap8 = SizedBox(height: 8.0);

@@ -18,8 +18,8 @@ class RefreshTokenModel {
   }
 
   Map<String, dynamic> toJson() => {
-        'data': data?.toJson(),
-        'message': message,
-        'status': status,
-      };
+    'data': data?.toJson(),
+    'message': message,
+    'status': status,
+  };
 }

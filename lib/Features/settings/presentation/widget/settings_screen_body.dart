@@ -45,7 +45,7 @@ class SettingsScreenBody extends StatelessWidget {
                     size: 40,
                   ),
                   content: Text(
-                    context.locale.translate("log_out")!,
+                    context.locale.translate("alert_text")!,
                     style: TextStyle(
                       color: Colors.black,
                       fontSize: 16,

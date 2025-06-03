@@ -6,6 +6,11 @@ import 'package:zonex/Features/auth/login/data/repositories/login_repo_impl.dart
 import 'package:zonex/Features/auth/login/domain/repositories/login_repo.dart';
 import 'package:zonex/Features/auth/login/domain/use_cases/login_use_case.dart';
 import 'package:zonex/Features/auth/login/presentation/manager/login_cubit.dart';
+import 'package:zonex/Features/home/data/data_source/products_remote_data_source.dart';
+import 'package:zonex/Features/home/data/repos/products_repo_impl.dart';
+import 'package:zonex/Features/home/domain/repos/products_repo.dart';
+import 'package:zonex/Features/home/domain/use_cases/products_use_case.dart';
+import 'package:zonex/Features/home/presentation/manager/cubit/products_cubit.dart';
 
 import '../../../Features/home/presentation/manager/cubit/bottom_nav_cubit.dart';
 import '../../../Features/splash/data/datasources/language_local_data_source.dart';
@@ -51,6 +56,17 @@ Future<void> init() async {
   getIt.registerLazySingleton<LoginRepo>(() => LoginRepoImpl(getIt.call()));
   getIt.registerLazySingleton<LoginRemoteDataSource>(
     () => LoginRemoteDataSourceImpl(),
+  );
+  //LoginCubit
+  getIt.registerFactory<ProductsCubit>(() => ProductsCubit(getIt.call()));
+  getIt.registerLazySingleton<ProductsUseCase>(
+    () => ProductsUseCase(getIt.call()),
+  );
+  getIt.registerLazySingleton<ProductsRepo>(
+    () => ProductsRepoImpl(getIt.call()),
+  );
+  getIt.registerLazySingleton<ProductsRemoteDataSource>(
+    () => ProductsRemoteDataSourceImpl(),
   );
   //Network
   getIt.registerLazySingleton<NetworkRequest>(() => NetworkRequestImp());

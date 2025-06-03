@@ -4,4 +4,5 @@ class Api {
   //end points
   static const String baseUrl = "${mainAppUrl}api/";
   static const String doServerLoginApiCall = "${baseUrl}v2/login";
+  static const String doServerProductsApiCall = "${baseUrl}v1/all/products";
 }
