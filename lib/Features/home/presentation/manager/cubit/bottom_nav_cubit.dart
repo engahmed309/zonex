@@ -22,7 +22,7 @@ class BottomNavCubit extends Cubit<BottomNavState> {
       create: (context) => getIt<ProductsCubit>(),
       child: HomeScreen(),
     ),
-    HomeScreen(),
+    SettingsScreen(),
     SettingsScreen(),
     SettingsScreen(),
   ];

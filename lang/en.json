@@ -172,5 +172,11 @@
   "no": "No",
   "gender": "Gender",
   "male": "Male",
-  "female": "Female"
+  "female": "Female",
+  "top_products": "Top products",
+  "featured_products": "Featured products",
+  "new_arrivals": "New arrivals",
+  "orders": "Orders",
+  "cart": "Cart",
+  "settings": "Settings"
 }

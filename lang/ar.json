@@ -155,5 +155,11 @@
   "no": "لا",
   "gender": "النوع",
   "male": "ذكر",
-  "female": "أنثى"
+  "female": "أنثى",
+  "top_products": "أفضل المنتجات",
+  "featured_products": "المنتجات المميزة",
+  "new_arrivals": "وصول جديد",
+  "orders": "الطلبات",
+  "cart": "السلة",
+  "settings": "الإعدادات"
 }

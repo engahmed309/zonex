@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:zonex/Features/home/presentation/widgets/custom_home_app_bar_widget.dart';
+import 'package:zonex/core/utils/helper.dart';
 
 import '../../../../core/utils/constants.dart';
 import '../manager/cubit/bottom_nav_cubit.dart';
@@ -32,16 +33,22 @@ class BottomNavWidget extends StatelessWidget {
             currentIndex: BlocProvider.of<BottomNavCubit>(
               context,
             ).bottomNavIndex,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: "home"),
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                label: context.locale.translate("home")!,
+              ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.shopping_cart),
-                label: "Cart",
+                label: context.locale.translate("cart")!,
               ),
-              BottomNavigationBarItem(icon: Icon(Icons.list), label: "Orders"),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.list),
+                label: context.locale.translate("orders")!,
+              ),
               BottomNavigationBarItem(
                 icon: Icon(Icons.settings),
-                label: "Settings",
+                label: context.locale.translate("settings")!,
               ),
             ],
           ),

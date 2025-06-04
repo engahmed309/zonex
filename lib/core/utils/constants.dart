@@ -7,6 +7,8 @@ const String kBottomNavRoute = '/bottomNavWidget';
 const String kLoginScreenRoute = '/loginScreen';
 const String kLanguageScreenRoute = '/languageScreen';
 const String kHomeScreenRoute = '/homeScreen';
+const String kProductDetailsScreenRoute = '/productDetailsScreen';
+const String kAllProductsScreenRoute = '/allProductsScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';

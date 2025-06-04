@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zonex/Features/auth/login/presentation/screens/login_screen.dart';
+import 'package:zonex/Features/home/data/models/products_model/products_model.dart';
+import 'package:zonex/Features/home/presentation/screens/all_products_screen.dart';
 import 'package:zonex/Features/home/presentation/screens/home_screen.dart';
+import 'package:zonex/Features/home/presentation/screens/product_details_screen.dart';
 import 'package:zonex/Features/language/presentation/screens/language_screen.dart';
 
 import '../../../Features/Splash/presentation/views/splash_screen.dart';
@@ -23,9 +26,15 @@ class AppRoutes {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case kBottomNavRoute:
         return MaterialPageRoute(builder: (_) => const BottomNavWidget());
-      // case kBookDetailsScreen:
-      //   return MaterialPageRoute(builder: (_) => const BookDetailsView());
-
+      case kProductDetailsScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) => ProductDetailsScreen(product: args as ProductsModel),
+        );
+      case kAllProductsScreenRoute:
+        return MaterialPageRoute(
+          builder: (_) =>
+              AllProductsScreen(allProducts: args as List<ProductsModel>),
+        );
       default:
         return null;
     }
