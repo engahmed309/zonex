@@ -2,7 +2,9 @@ import 'dart:collection';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:zonex/Features/cart/presentation/screens/cart_screen.dart';
 import 'package:zonex/Features/home/presentation/manager/cubit/products_cubit.dart';
+import 'package:zonex/Features/orders/presentation/screens/orders_screen.dart';
 import 'package:zonex/Features/settings/presentation/screens/settings_screen.dart';
 import 'package:zonex/core/utils/functions/setup_service_locator.dart';
 
@@ -22,8 +24,8 @@ class BottomNavCubit extends Cubit<BottomNavState> {
       create: (context) => getIt<ProductsCubit>(),
       child: HomeScreen(),
     ),
-    SettingsScreen(),
-    SettingsScreen(),
+    CartScreen(),
+    OrdersScreen(),
     SettingsScreen(),
   ];
 

@@ -34,7 +34,17 @@ class ZoneX extends StatelessWidget {
             localizationsDelegates:
                 AppLocalizationsSetup.localizationsDelegates,
             debugShowCheckedModeBanner: false,
+            darkTheme: ThemeData(
+              brightness: Brightness.dark,
+              scaffoldBackgroundColor: Colors.black,
+              bottomNavigationBarTheme: const BottomNavigationBarThemeData(),
+              // primarySwatch: Colors.blue,
+            ),
+            themeMode:
+                ThemeMode.system, // Can be ThemeMode.light or ThemeMode.dark
             theme: ThemeData(
+              brightness: Brightness.light,
+
               primaryColor: kPrimaryColor,
               appBarTheme: const AppBarTheme(
                 foregroundColor: Colors.white,

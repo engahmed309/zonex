@@ -18,7 +18,9 @@ class SettingsScreenBody extends StatelessWidget {
           leadingIcon: Icons.person_rounded,
           trailingIcon: Icons.arrow_forward_ios,
           leadingIconColor: Colors.green,
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, kProfileScreenRoute);
+          },
         ),
         CustomSettingItem(
           title: context.locale.translate("language")!,

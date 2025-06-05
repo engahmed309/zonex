@@ -53,15 +53,15 @@ class CustomHomeAppBar extends StatelessWidget {
           ),
         ],
       ),
-      leading: Padding(
-        padding: EdgeInsets.all(context.screenWidth * .01),
-        child: CircleAvatar(
-          backgroundColor: kBottomNavIconsColor,
-          child: imagePath == null
-              ? Icon(Icons.person, color: Colors.white)
-              : Image.file(File(imagePath)),
-        ),
-      ),
+      leading: imagePath != null
+          ? CircleAvatar(backgroundImage: FileImage(File(imagePath)))
+          : Padding(
+              padding: EdgeInsets.all(context.screenWidth * .01),
+              child: CircleAvatar(
+                backgroundColor: kBottomNavIconsColor,
+                child: Icon(Icons.person, color: Colors.white),
+              ),
+            ),
       actions: [
         InkWell(
           onTap: () {

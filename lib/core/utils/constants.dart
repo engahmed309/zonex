@@ -6,11 +6,13 @@ const String initialRoute = '/';
 const String kBottomNavRoute = '/bottomNavWidget';
 const String kLoginScreenRoute = '/loginScreen';
 const String kRegisterScreenRoute = '/registerScreen';
+const String kProfileScreenRoute = '/profileScreen';
 
 const String kLanguageScreenRoute = '/languageScreen';
 const String kHomeScreenRoute = '/homeScreen';
 const String kProductDetailsScreenRoute = '/productDetailsScreen';
 const String kAllProductsScreenRoute = '/allProductsScreen';
+const String kOrderDetailsScreenRoute = '/orderDetailsScreen';
 
 // saved sharedprefernces
 const String locale = 'locale';
