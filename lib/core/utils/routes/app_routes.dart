@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:zonex/Features/auth/login/presentation/screens/login_screen.dart';
+import 'package:zonex/Features/auth/register/presentation/screens/register_screen.dart';
 import 'package:zonex/Features/home/data/models/products_model/products_model.dart';
 import 'package:zonex/Features/home/presentation/screens/all_products_screen.dart';
 import 'package:zonex/Features/home/presentation/screens/home_screen.dart';
@@ -35,6 +36,8 @@ class AppRoutes {
           builder: (_) =>
               AllProductsScreen(allProducts: args as List<ProductsModel>),
         );
+      case kRegisterScreenRoute:
+        return MaterialPageRoute(builder: (_) => RegisterScreen());
       default:
         return null;
     }

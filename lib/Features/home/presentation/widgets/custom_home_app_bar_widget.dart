@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:zonex/Features/auth/login/domain/entities/login_entity.dart';
@@ -8,9 +10,12 @@ import '../../../../core/utils/constants.dart';
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key, required this.tapHandler});
   final Function tapHandler;
+
   @override
   Widget build(BuildContext context) {
     var box = Hive.box<LoginEntity>(kUserDataBox);
+    var imageBox = Hive.box(kUserImageBox);
+    final String? imagePath = imageBox.get('image');
     return AppBar(
       // RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
       shape: RoundedRectangleBorder(
@@ -52,7 +57,9 @@ class CustomHomeAppBar extends StatelessWidget {
         padding: EdgeInsets.all(context.screenWidth * .01),
         child: CircleAvatar(
           backgroundColor: kBottomNavIconsColor,
-          child: Icon(Icons.person, color: Colors.white),
+          child: imagePath == null
+              ? Icon(Icons.person, color: Colors.white)
+              : Image.file(File(imagePath)),
         ),
       ),
       actions: [

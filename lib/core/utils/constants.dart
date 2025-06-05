@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 const String initialRoute = '/';
 const String kBottomNavRoute = '/bottomNavWidget';
 const String kLoginScreenRoute = '/loginScreen';
+const String kRegisterScreenRoute = '/registerScreen';
+
 const String kLanguageScreenRoute = '/languageScreen';
 const String kHomeScreenRoute = '/homeScreen';
 const String kProductDetailsScreenRoute = '/productDetailsScreen';
@@ -55,20 +57,9 @@ const kHacenTunisia = 'Hacen Tunisia';
 
 const kFeaturedBox = 'featured_box';
 const kUserDataBox = 'login_box';
+const kUserImageBox = 'image_box';
+
 const kUserIdBox = 'user_id';
-
-//AddUserBox
-const kValidUserNameBox = 'user_name_box';
-const kValidEmailBox = 'email_box';
-const kValidPhoneBox = 'phone_box';
-const kValidPlateNumberBox = 'plate_number_box';
-const kUserGenderBox = 'user_gender_box';
-
-const kCarBrandIdBox = 'car_brand_id_box';
-const kCarModelBox = 'car_model_box';
-const kCityIdBox = 'city_id_box';
-const kPasswordBox = 'password_box';
-const kUserImageBox = 'user_image_box';
 
 class AppConstant {
   static const String data = "data";

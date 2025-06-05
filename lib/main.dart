@@ -17,6 +17,7 @@ void main() async {
   await Hive.initFlutter();
   Hive.registerAdapter(LoginEntityAdapter());
   await Hive.openBox<LoginEntity>(kUserDataBox);
+  await Hive.openBox(kUserImageBox);
   await Supabase.initialize(
     url: 'https://efyxlrnkywdymjwjlerw.supabase.co',
     anonKey:

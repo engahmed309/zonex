@@ -153,7 +153,7 @@ class _LoginBodyState extends State<LoginBody> with ValidationMixin {
                     ),
                     InkWell(
                       onTap: () async {
-                        //   Navigator.pushNamed(context, kSignUpScreenRoute);
+                        Navigator.pushNamed(context, kRegisterScreenRoute);
                       },
                       child: SizedBox(
                         width: context.screenWidth * .4,

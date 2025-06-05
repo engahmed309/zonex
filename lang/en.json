@@ -178,5 +178,11 @@
   "new_arrivals": "New arrivals",
   "orders": "Orders",
   "cart": "Cart",
-  "settings": "Settings"
+  "settings": "Settings",
+  "phone": "Phone",
+  "address": "Address",
+  "field_required": "Field is required",
+  "passwords_do_not_match": "Passwords do not match",
+  "enter_valid_password": "Please enter a valid password",
+  "account_created_successfully": "Account created successfully"
 }
