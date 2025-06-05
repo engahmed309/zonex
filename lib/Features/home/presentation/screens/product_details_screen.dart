@@ -206,7 +206,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 child: isAddingToCart
                     ? const CircularProgressIndicator(color: Colors.white)
                     : const Text(
-                        'أضف إلى السلة',
+                        'Add to Cart',
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
               ),
